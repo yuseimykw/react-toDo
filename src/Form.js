@@ -5,7 +5,10 @@ const Form = ({ toDos, setToDos }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setToDos(toDos.concat({ key: newNote }))
+    setToDos(toDos.concat({
+      item: newNote,
+      id: toDos.length
+    }))
     //todos配列に入力した値を保持したnewNoteが追加されて新しい配列に更新される
     //配列.pushは駄目
     setNewNote("")

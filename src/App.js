@@ -6,18 +6,19 @@ function App() {
 
   const [toDos, setToDos] = useState([
     {
-      key: "アンパン",
+      item: "アンパン",
+      id: 0
     },
     {
-      key: "メロンパン"
+      item: "メロンパン",
+      id: 1
     }
-    // "オーバメヤン", "ラカゼット"
   ])
 
   return (
     <div>
       <Form setToDos={setToDos} toDos={toDos} />
-      <List toDos={toDos} />
+      <List toDos={toDos} setToDos={setToDos} />
     </div>
   )
 
